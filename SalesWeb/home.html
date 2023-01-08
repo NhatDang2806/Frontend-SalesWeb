@@ -1,0 +1,336 @@
+<html>
+    <head>
+        <Title>Ụt Ịt MilkTea</Title>
+        <meta charset="UTF-8">
+          <!--favicon-->
+          <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+          <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+          <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+          <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+          <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+          <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+          <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+          <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+          <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+          <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+          <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+          <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+          <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+          <link rel="manifest" href="favicon/manifest.json">
+          <meta name="msapplication-TileColor" content="#ffffff">
+          <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+          <meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+    </head>
+  
+    <body>
+     
+      <!--HEADER-->
+
+          <div class="wapper">
+            <div class="menu">
+              <ul>
+                <li><a href="" id="logo"><img src="./images/logo.png" alt=""></a></li>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a>
+                  <ul class="menu-con">
+                    <li><a href="./collections/trasua.html">Trà sữa</a></li>
+                    <li><a href="./collections/tratraicay.html">Trà trái cây</a></li>
+                    <li><a href="./collections/daxay.html">Đá xay</a></li>
+                    <li><a href="./collections/soda&coffee.html">Soda & Coffee</a></li>
+                    <li><a href="./collections/topping.html">Topping</a></li>
+                  </ul>
+                </li>
+                <li><a href="dathang.html">Đặt hàng</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+              </ul>
+              <div class="box">
+                <input type="text" placeholder="Tìm kiếm">
+                    <a><i class="fas fa-search-location"></i></a>
+              </div>
+              <div class="user">
+                <div class="boxuser">
+                  <a href="">Đăng nhập &#124;</a>
+                </div>
+                <div class="boxuser">
+                  <a href="">Đăng ký</a>
+                </div>
+              </div>
+            </div>
+          </div>
+     
+      <!--MAIN-->
+      <div class="zcontent">
+        <div class="wapper">
+          <div class="content">
+            <div class="notification">
+              <p>Chào mừng bạn đến với Ụt Ịt MilkTea</p>
+            </div>
+            <div class="banner">
+              <h1>Best Seller</h1>
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <img src="./images/trasua/trasuamatcha.png" style="width:100%" alt="">
+                  <div class="text"><h4>Trà sữa matcha</h4></div>
+                </div>
+                <div class="mySlides fade">
+                  <img src="./images/tratraicay/tradaocamsa.png" style="width:100%" alt="">
+                  <div class="text"><h4>Trà đào cam sã</h4></div>
+                </div>
+                <div class="mySlides fade">
+                  <img src="./images/daxay/daxaydammay.png" style="width:100%" alt="">
+                  <div class="text"><h4>Đá xay đám mây</h4></div>
+                </div>
+              <br>
+              <div class="dotbar" style="text-align:center">
+                <span class="dot" onclick="currentSlide(0)"></span> 
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+
+              </div>
+              <script>
+                //khai báo biến slideIndex đại diện cho slide hiện tại
+                var slideIndex;
+                // KHai bào hàm hiển thị slide
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                       slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+               
+                    slides[slideIndex].style.display = "block";  
+                    dots[slideIndex].className += " active";
+                    //chuyển đến slide tiếp theo
+                    slideIndex++;
+                    //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+                    if (slideIndex > slides.length - 1) {
+                      slideIndex = 0
+                    }    
+                    //tự động chuyển đổi slide sau 5s
+                    setTimeout(showSlides, 5000);
+                }
+                //mặc định hiển thị slide đầu tiên 
+                showSlides(slideIndex = 0);
+               
+               
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+              </script> 
+            </div>
+         <div class="wrapper-heading-home">
+          <div class="container">
+            <div class="trasua">
+             <h2><a href="./collections/trasua.html">Trà sữa</a></h2>          
+             <div class="view-all"><a href="./collections/trasua.html">Xem thêm</a></div>
+            </div>
+            <div class="row">
+              <div class="sanpham">
+               <div><a href="./collections/trasua.html"><img src="./images/trasua/trasuamatcha.png" width="200px" height="200px" alt=""></a></div>
+               <div><a href="./collections/trasua.html"> Trà sữa matcha </a></div>
+               <div><span style="font-size: 15px;"> 22.000đ </span></div>
+              </div>
+
+              <div class="sanpham">
+                <div><a href="./collections/trasua.html"><img src="./images/trasua/trasuachocola.webp" width="200px" height="200px" alt=""></a></div>
+                <div><a href="./collections/trasua.html"> Trà sữa chocolate </a></div>
+                <div><span style="font-size: 15px;"> 22.000đ </span></div>
+               </div>
+
+               <div class="sanpham">
+                <div><a href="./collections/trasua.html"><img src="./images/trasua/trasuasuongsao.jpg" width="200px" height="200px" alt=""></a></div>
+                <div><a href="./collections/trasua.html"> Trà sữa sương sáo </a></div>
+                <div><span style="font-size: 15px;"> 25.000đ </span></div>
+               </div>
+
+               <div class="sanpham">
+                <div><a href="./collections/trasua.html"><img src="./images/trasua/trasuagaolut.jpg" width="200px" height="200px" alt=""></a></div>
+                <div><a href="./collections/trasua.html"> Trà sữa gạo lứt </a></div>
+                <div><span style="font-size: 15px;"> 32.000đ </span></div>
+               </div>
+
+               <div class="sanpham">
+                <div><a href="./collections/trasua.html"><img src="./images/trasua/trasuahoadaubiec.jpg" width="200px" height="200px" alt=""></a></div>
+                <div><a href="./collections/trasua.html"> Trà sữa hoa đậu biếc </a></div>
+                <div><span style="font-size: 15px;"> 36.000đ </span></div>
+               </div>
+
+              </div>
+
+          <div class="tratraicay">
+            <h2><a href="./collections/tratraicay.html">Trà trái cây</a></h2>          
+             <div class="view-all"><a href="./collections/tratraicay.html">Xem thêm</a></div>
+          </div>
+          <div class="row">
+            <div class="sanpham">
+              <div><a href="./collections/tratraicay.html"><img src="./images/tratraicay/hongtramachiato.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/tratraicay.html"> Hồng trà Machiato </a></div>
+              <div><span style="font-size: 15px;"> 25.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/tratraicay.html"><img src="./images/tratraicay/tracamvangchanhday.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/tratraicay.html"> Trà cam vàng chanh dây </a></div>
+              <div><span style="font-size: 15px;"> 35.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/tratraicay.html"><img src="./images/tratraicay/trachanhbacha.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/tratraicay.html"> Trà chanh bạc hà  </a></div>
+              <div><span style="font-size: 15px;"> 20.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/tratraicay.html"><img src="./images/tratraicay/tradaocamsa.png" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/tratraicay.html"> Trà đào cam sả </a></div>
+              <div><span style="font-size: 15px;"> 22.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/tratraicay.html"><img src="./images/tratraicay/traolongsenvang.jpeg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/tratraicay.html"> Trà Ôlong sen vàng </a></div>
+              <div><span style="font-size: 15px;"> 30.000đ </span></div>
+             </div>
+
+             </div>
+          <div class="daxay">
+            <h2><a href="./collections/daxay.html">Đá xay</a></h2>          
+            <div class="view-all"><a href="./collections/daxay.html">Xem thêm</a></div>
+          </div>
+          <div class="row">
+          <div class="sanpham">
+            <div><a href="./collections/daxay.html"><img src="./images/daxay/daxayphucbontu.jpg" width="200px" height="200px" alt=""></a></div>
+            <div><a href="./collections/daxay.html"> Đá xay phúc bồn tử </a></div>
+            <div><span style="font-size: 15px;"> 35.000đ </span></div>
+           </div>
+
+           <div class="sanpham">
+            <div><a href="./collections/daxay.html"><img src="./images/daxay/carameldaxay.jpg" width="200px" height="200px" alt=""></a></div>
+            <div><a href="./collections/daxay.html"> Caramel đá xay </a></div>
+            <div><span style="font-size: 15px;"> 35.000đ </span></div>
+           </div>
+
+           <div class="sanpham">
+            <div><a href="./collections/daxay.html"><img src="./images/daxay/caphedaxay.jpg" width="200px" height="200px" alt=""></a></div>
+            <div><a href="./collections/daxay.html"> Coffee đá xay </a></div>
+            <div><span style="font-size: 15px;"> 35.000đ </span></div>
+           </div>
+
+           <div class="sanpham">
+            <div><a href="./collections/daxay.html"><img src="./images/daxay/daxaychanhtuyetbacha.png" width="200px" height="200px" alt=""></a></div>
+            <div><a href="./collections/daxay.html"> Đá xay chanh tuyết bạc hà </a></div>
+            <div><span style="font-size: 15px;"> 30.000đ </span></div>
+           </div>
+
+           <div class="sanpham">
+            <div><a href="./collections/daxay.html"><img src="./images/daxay/daxayvietquat.jpg" width="200px" height="200px" alt=""></a></div>
+            <div><a href="./collections/daxay.html"> Đá xay việt quất </a></div>
+            <div><span style="font-size: 15px;"> 25.000đ </span></div>
+           </div>
+
+          </div>
+          <div class="soda">
+            <h2><a href="./collections/soda&coffee.html">Soda & coffee</a></h2>          
+             <div class="view-all"><a href="./collections/soda&coffee.html">Xem thêm</a></div> 
+          </div>
+          <div class="row">
+            <div class="sanpham">
+              <div><a href="./collections/soda&coffee.html"><img src="./images/soda&coffee/deepblue.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/soda&coffee.html"> Deep blue </a></div>
+              <div><span style="font-size: 15px;"> 25.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/soda&coffee.html"><img src="./images/soda&coffee/sodadau.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/soda&coffee.html"> Soda strawberry </a></div>
+              <div><span style="font-size: 15px;"> 25.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/soda&coffee.html"><img src="./images/soda&coffee/cafeden.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/soda&coffee.html"> Cafe đen </a></div>
+              <div><span style="font-size: 15px;"> 15.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/soda&coffee.html"><img src="./images/soda&coffee/cafesua.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/soda&coffee.html"> Cafe sữa </a></div>
+              <div><span style="font-size: 15px;"> 20.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/soda&coffee.html"><img src="./images/soda&coffee/cotduacafe.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/soda&coffee.html"> Cốt dừa cafe </a></div>
+              <div><span style="font-size: 15px;"> 45.000đ </span></div>
+             </div>
+          </div>
+          <div class="topping">
+            <h2><a href="./collections/topping.html">Topping</a></h2>          
+            <div class="view-all"><a href="./collections/topping.html">Xem thêm</a></div>
+          </div>
+          <div class="row">
+            <div class="sanpham">
+              <div><a href="./collections/topping.html"><img src="./images/topping/chantrauden.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/topping.html"> Chân trâu đen </a></div>
+              <div><span style="font-size: 15px;"> 5.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/topping.html"><img src="./images/topping/chantrautrang.png" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/topping.html"> Chân trâu trắng </a></div>
+              <div><span style="font-size: 15px;"> 5.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/topping.html"><img src="./images/topping/chantrauhoangkim.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/topping.html"> Chân trâu hoàng kim </a></div>
+              <div><span style="font-size: 15px;"> 5.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/topping.html"><img src="./images/topping/khucbach.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/topping.html"> Khúc bạch </a></div>
+              <div><span style="font-size: 15px;"> 10.000đ </span></div>
+             </div>
+
+             <div class="sanpham">
+              <div><a href="./collections/topping.html"><img src="./images/topping/pudding.jpg" width="200px" height="200px" alt=""></a></div>
+              <div><a href="./collections/topping.html"> Pudding </a></div>
+              <div><span style="font-size: 15px;"> 10.000đ </span></div>
+             </div>
+          </div>
+          </div>
+         </div>         
+        </div> 
+       </div>
+      </div>
+      <div class="congratulation"><h2>**Chúc quý khách ngon miệng**</h2></div>
+
+      <!--FOOTER-->
+      <div class="zfooter">
+          <div class="footer">
+            <div class="foo1">
+                <h3>Liên hệ với chúng tôi</h3>
+                <p><i class="fas fa-home"></i> 828 Sư Vạn Hạnh, Q10, TPHCM</p>
+                <p><i class="fas fa-envelope"></i> utitmilktea@gmail.com</p>
+                <p><i class="fas fa-phone-alt"></i> 0817005007</p>
+            </div>
+            <div class="foo2">
+             <p> © UtIt MilkTea.All rights reserved.</p>
+            </div>
+            <div class="foo3">
+              <h3>Kết nối với chúng tôi</h3>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+          </div>
+      </div>   
+    </body>
+</html>
